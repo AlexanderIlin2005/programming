@@ -1,0 +1,66 @@
+@startuml
+top to bottom direction
+skinparam linetype ortho
+
+class Pokemon
+abstract class Move
+
+class Hariyama
+Hariyama <|-- Pokemon
+
+class Makuhita
+Makuhita <|-- Pokemon
+
+class Politoed
+Politoed <|-- Pokemon
+
+class Poliwag
+Poliwag <|-- Pokemon
+
+class Poliwhirl
+Poliwhirl <|-- Pokemon
+
+
+class Zapdos
+Zapdos <|-- Pokemon
+
+
+class StatusMove
+StatusMove <|-- Move
+class DamageMove
+DamageMove <|-- Move
+class SpecialMove
+SpecialMove <|-- DamageMove
+class PhysicalMove
+PhysicalMove <|-- DamageMove
+class FireMove
+FireMove <|-- SpecialMove
+
+class Agility
+Agility <|-- StatusMove
+class BulkUp
+BulkUp <|-- StatusMove
+class Confide
+Confide <|-- StatusMove
+class DoubleTeam
+DoubleTeam <|-- StatusMove
+class Swagger
+Swagger <|-- StatusMove
+
+
+class HyperVoice
+HyperVoice <|-- SpecialMove
+class Thunder
+Thunder <|-- SpecialMove
+
+
+class BodySlam
+BodySlam <|-- PhysicalMove
+class Peck
+Peck <|-- PhysicalMove
+class StoneEdge
+StoneEdge <|-- PhysicalMove
+class Waterfall
+Waterfall <|-- PhysicalMove
+
+@enduml
