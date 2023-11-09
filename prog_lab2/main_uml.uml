@@ -5,24 +5,36 @@ skinparam linetype ortho
 class Pokemon
 abstract class Move
 
+
+
+
+
+
+
+
+
 class Hariyama
 Hariyama <|-- Pokemon
 
 class Makuhita
 Makuhita <|-- Pokemon
 
-class Politoed
-Politoed <|-- Pokemon
+
 
 class Poliwag
 Poliwag <|-- Pokemon
 
 class Poliwhirl
-Poliwhirl <|-- Pokemon
+Poliwhirl <|-- Poliwag
+
+class Politoed
+Politoed <|-- Poliwhirl
 
 
-class Zapdos
+class Zapdos 
 Zapdos <|-- Pokemon
+
+
 
 
 class StatusMove
@@ -62,5 +74,9 @@ class StoneEdge
 StoneEdge <|-- PhysicalMove
 class Waterfall
 Waterfall <|-- PhysicalMove
+
+
+
+
 
 @enduml
