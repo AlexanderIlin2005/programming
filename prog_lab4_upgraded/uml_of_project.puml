@@ -1,0 +1,165 @@
+@startuml
+enum enums.Product {
++  LOLLIPOPS
++  SUGARED_NUT
++  CHOCOLATE
+- String value
+~ <<Create>> Product(String)
++ String getValue()
++ String toString()
+}
+enum enums.Gender {
++  MALE
++  FEMALE
++  MIDDlE
++  ALL
++ String ending
+~ <<Create>> Gender(String)
+}
+interface interfaces.WordAgreementable {
+~ String makeSentence(BaseObject,String,Tense,String)
+~ String makeSentence(Gender,String,Tense,String)
+}
+class Main {
++ {static} void main(String[])
+}
+interface interfaces.MoneyReceivable {
++ void get(Money)
++ void getMoney(Money)
++ void getMoney(ArrayList<Money>)
++ void giveMoney(Money,Human)
++ void giveMoney(ArrayList<Money>,Human)
++ void giveAllMoney(Human)
+}
+class objects.Knife {
+- Place place
++ <<Create>> Knife(String,Place)
++ void moveTo(Human,Place)
+}
+class objects.Kid {
+~ PiggyBank savedBank
+~ String savedNumanName
++ <<Create>> Kid(String,Gender)
++ void get(Money)
+- void emptyPiggyBank(PiggyBank)
++ void becomeMotherTo(Human,PiggyBank)
++ void becomeMotherTo(Human)
++ void stoodConfused()
++ void buySweetsForAllMoney(Shop)
++ void thinkAboutDog()
++ void toMeetFamilyWithCarlson(Karlson,Family,String,Place)
++ void noTimeToSpendWith(Family)
++ void takeSomeCookies(Vase)
++ void saveToPiggyBank(PiggyBank)
++ void thinkAboutFlying(Place)
+}
+class objects.PiggyBank {
+- Place place
+- String[] properties
+- Place placeForRollingCoins
+- List<Money> coinsList
+~ boolean is_open
++ <<Create>> PiggyBank(String,Gender,Place,Place,String[])
++ void open(Human,Knife)
++ void makeEmpty(Human,Human)
+- void createBank()
++ boolean isEmpty()
++ String toString()
++ void addMoney(Kid,ArrayList<Money>)
+}
+enum enums.Money {
++  FIVE
++  TEN
++  TWENTY_FIVE
+- String value
+~ <<Create>> Money(String)
++ String getValue()
++ String toString()
+}
+class objects.Vase {
++ <<Create>> Vase(String,Gender)
++ BaseObject getCookie()
+}
+class objects.Shop {
+~ Human salesman
++ <<Create>> Shop(String,Gender,Human)
++ void buy(Human,ArrayList<Money>)
+}
+enum enums.Tense {
++  NOW
++  FUTURE
++  PAST
++ String start
++ String ending
+~ <<Create>> Tense(String,String)
++ String toString()
+}
+abstract class objects.BaseObject {
++ String name
++ Gender gender
++ <<Create>> BaseObject(String,Gender)
++ <<Create>> BaseObject()
++ int hashCode()
++ String toString()
+}
+class objects.Place {
++ <<Create>> Place(String,Gender)
+}
+class objects.Karlson {
++ <<Create>> Karlson(String,Gender)
++ void get(Money)
++ void lookAtWithHope(Human)
++ void sayHeWantsCookies(Human)
++ void calmDown(Kid)
+- void goodReaction()
+}
+class objects.Family {
+- List<Human> members
++ <<Create>> Family(String,List<Human>)
+- String execute(String,Tense,String)
++ void moveAllMembersTo(Place)
++ String preventFromGoing(Human,Karlson,Place)
++ void drinkCoffeeAfterDinner()
+}
+class exceptions.NoMoneyException {
+- Human h1
+- Human h2
++ <<Create>> NoMoneyException(Human,Human)
++ String toString()
+}
+class objects.Human {
+~ Place place
+# ArrayList<Money> wallet
++ <<Create>> Human(String,Gender)
++ void getMoney(Money)
++ void getMoney(ArrayList<Money>)
++ void giveMoney(Money,Human)
++ void giveMoney(ArrayList<Money>,Human)
++ void giveAllMoney(Human)
++ void moveTo(Place)
+- StringBuilder joinListOfCoins(ArrayList<Money>)
++ void get(Money)
+}
+class exceptions.UnableToMakePurchaseException {
+- Human human
+- Shop shop
++ <<Create>> UnableToMakePurchaseException(Human,Shop)
++ String toString()
+}
+
+
+objects.BaseObject <|-- objects.Knife
+objects.Human <|-- objects.Kid
+objects.BaseObject <|-- objects.PiggyBank
+objects.Place <|-- objects.Vase
+objects.Place <|-- objects.Shop
+interfaces.WordAgreementable <|.. objects.BaseObject
+objects.BaseObject <|-- objects.Place
+objects.Human <|-- objects.Karlson
+interfaces.WordAgreementable <|.. objects.Family
+objects.BaseObject <|-- objects.Family
+exceptions.IndexOutOfBoundsException <|-- exceptions.NoMoneyException
+interfaces.MoneyReceivable <|.. objects.Human
+objects.BaseObject <|-- objects.Human
+exceptions.Exception <|-- exceptions.UnableToMakePurchaseException
+@enduml
