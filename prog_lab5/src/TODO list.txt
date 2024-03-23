@@ -1,0 +1,35 @@
++ 1) Реализовать классы базовой модели (City, Climate, Coordinates, StandardOfLiving, Human)
+ согласно заданию // (готово!)
++ 2) Реализовать класс консоли // (готово!)
++ 3) Реализовать абстрактный класс Element // (готово!)
++ 4) Реализовать интерфейс Validatable // (готово!)
+- 5) Создать классы под все команды
+        - 5.1) Managers
+            + CommandManager // (готово!)
+            + CollectionManager // (готово!)
+            + DumpManager // (готово!)
+        - 5.2) Commands:
+            + abstract Command // (готово!)
+            - help // (готово!)
+            - info // (готово!)
+            - show // (готово!)
+            - insert null {element} // (готово!)
+            - update id {element} // (готово!)
+            - remove_key null // (готово!)
+            - clear // (готово!)
+            - save // (готово!)
+            - execute script file_name // (готово!)
+            - exit // (готово!)
+            - replace_if_greater null {element} // (готово!)
+            - replace_if_lower null {element} // (готово!)
+            - remove_greater_key null // (готово!)
+            - min_by_population // (готово!)
+            - group_counting_by_area // (готово!)
+            - count_by_meters_above_sea_level metersAboveSeaLevel // (готово!)
+        - 5.3) Что-то еще ...
+- 6) Создать классы под все ошибки Errors/Exceptions // (частично выполнено)
+- 7) Создать простую UML диаграмму
++ 8) Отдельно: реализовать сохранение коллекции в XML файл (Save.java) //(готово!) - если работает
++ 9) Отдельно: реализовать загрузку коллекции из XML файла () // (готово!) - если работает
+- 10) Создать сложную UML диаграмму
+- 11) Создать JAVADOC
