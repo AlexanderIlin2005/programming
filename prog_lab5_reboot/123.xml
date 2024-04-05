@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CityCollections>
+    <collection>
+        <entry>
+            <key>1</key>
+            <value>
+                <id>1</id>
+                <name>4</name>
+                <coordinates>
+                    <x>4.0</x>
+                    <y>4.0</y>
+                </coordinates>
+                <creationDate>2024-04-05 21:11:47</creationDate>
+                <area>4</area>
+                <population>4</population>
+                <metersAboveSeaLevel>4</metersAboveSeaLevel>
+                <capital>false</capital>
+                <climate>RAIN_FOREST</climate>
+                <standard0fLiving>NIGHTMARE</standard0fLiving>
+                <governor>
+                    <age>456</age>
+                </governor>
+            </value>
+        </entry>
+        <entry>
+            <key>999</key>
+            <value>
+                <id>999</id>
+                <name>678</name>
+                <coordinates>
+                    <x>765.0</x>
+                    <y>999.0</y>
+                </coordinates>
+                <creationDate>2024-04-05 21:12:29</creationDate>
+                <area>8</area>
+                <population>8</population>
+                <metersAboveSeaLevel>6</metersAboveSeaLevel>
+                <capital>true</capital>
+                <climate>MEDITERRANIAN</climate>
+                <standard0fLiving>NIGHTMARE</standard0fLiving>
+                <governor>
+                    <age>67</age>
+                </governor>
+            </value>
+        </entry>
+    </collection>
+</CityCollections>
